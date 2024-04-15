@@ -34,7 +34,7 @@ public class UserController {
 	private final UserService service;
 
 
-	@GetMapping({"","/"})
+	@GetMapping({"/","/auth/loginForm"})
 	public String loginForm() {
 		return "auth/loginForm";
 	}

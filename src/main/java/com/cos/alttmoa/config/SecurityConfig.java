@@ -20,14 +20,14 @@ public class SecurityConfig {
 	SecurityFilterChain filterchain(HttpSecurity http) throws Exception {
 		http.csrf().disable();
 		http.authorizeRequests()
-			 .antMatchers("user/**","/image/**").authenticated()
+			 .antMatchers("/user/**","/image/**").authenticated()
 			 .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 			 .anyRequest().permitAll()
 			 .and()
 			 .formLogin()
 			 .loginPage("/auth/loginForm")
 			 .loginProcessingUrl("/auth/login")
-			 .defaultSuccessUrl("/");
+			 .defaultSuccessUrl("/image/story"); //여기만 경로 변경해주기
 		return http.build();
 	}
 	
