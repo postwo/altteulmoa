@@ -13,7 +13,7 @@
 <form action="/auth/join" method="post">
         
                     <p>아이디</p>
-                    <input type="text" placeholder="아이디를 입력해주세요." name="userId"required="required" />
+                    <input type="text" placeholder="아이디를 입력해주세요." name="username"required="required" />
            
                     <p>비밀번호</p>
                     <input input type="password" name="password" " placeholder="비밀번호를 입력해주세요" required="required" maxlength='20'/>

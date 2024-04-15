@@ -26,10 +26,10 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int userId;
 	
 	@Column(unique = true,length = 20)
-	private String userId;
+	private String username;
 	
 	@Column(nullable = false)
 	private String password;

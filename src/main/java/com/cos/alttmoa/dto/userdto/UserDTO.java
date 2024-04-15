@@ -19,7 +19,8 @@ import lombok.ToString;
 public class UserDTO { 
 	
 	@NotBlank
-	private String userId;
+	@Size(max=20)
+	private String username;
 	
 	@NotBlank
     @Size(min = 4, max = 15)
@@ -56,7 +57,7 @@ public class UserDTO {
 	
 	public User ToEntity() {
 		return User.builder()
-				.userId(userId)
+				.username(username)
 				.password(password)
 				.email(email)
 				.nickname(nickname)
